@@ -1,1 +1,13 @@
 .superpowers/
+
+# Obsidian 개인 상태 (설정은 커밋, 워크스페이스는 제외)
+vault/.obsidian/workspace*.json
+vault/.obsidian/cache
+vault/.trash/
+
+# Quartz
+site/node_modules/
+site/public/
+site/.quartz-cache/
+
+__pycache__/
