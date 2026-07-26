@@ -132,3 +132,12 @@ HIGH가 나오면: 파일을 임의로 고치거나 지우지 말고, 해당 키
 ```bash
 cd scripts && py -m unittest
 ```
+
+## 번역 규칙 (KR/EN)
+
+발행 노트 중 영어 버전이 있는 노트는 KR/EN 토글로 서로 연결된다.
+
+- **경로**: 영어 노트는 `vault/en/` 아래에 한국어 폴더 구조를 그대로 미러링해 둔다 (예: `vault/50-MOC/LLM MOC.md` ↔ `vault/en/50-MOC/LLM MOC (EN).md`). 파일명은 영어로 자유롭게 지어도 되지만, 한국어 원본과 같은 파일명을 그대로 재사용하면 Quartz의 `shortest` 링크 해석에서 슬러그 마지막 세그먼트가 겹쳐 위키링크가 엉뚱한 곳으로 깨질 수 있으므로 구분되는 파일명을 쓴다.
+- **frontmatter**: 짝이 있는 노트는 `lang: ko`(또는 `en`)와 `translation: <상대 슬러그>`를 명시한다. `translation` 값은 상대 슬러그 문자열(예: `en/50-MOC/LLM-MOC-(EN)`)이며, 확실치 않으면 빌드 후 `site/public`의 실제 출력 경로로 검증한다.
+- `translation` 프로퍼티가 없는 노트는 토글이 렌더링되지 않는다 — 짝이 없는 노트는 그대로 두면 된다.
+- **발행 노트만 번역 유지**: `publish: true`인 노트만 번역 대상이다. 새 노트를 공개 발행할 때 영어 버전도 필요하면 같은 규칙(경로/frontmatter)을 따라 `vault/en/`에 추가한다.

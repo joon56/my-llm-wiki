@@ -96,3 +96,17 @@ a.internal.tag-link {
 
 // ---------- ==하이라이트== 다크모드 가독성 ----------
 .text-highlight { color: #111111; }
+
+// ---------- 언어 토글 ----------
+.language-toggle {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  padding: 0.1rem 0.5rem;
+  border: 1px solid var(--brutal-ink);
+  border-radius: 0;
+  background-color: var(--brutal-lime);
+  color: var(--brutal-ink) !important;
+  font-weight: 700;
+  text-decoration: none;
+  &:hover { background-color: var(--brutal-violet); color: #fff !important; }
+}
