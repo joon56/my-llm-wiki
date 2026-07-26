@@ -97,6 +97,68 @@ a.internal.tag-link {
 // ---------- ==하이라이트== 다크모드 가독성 ----------
 .text-highlight { color: #111111; }
 
+// ---------- 본문 가독성 (노트 페이지) ----------
+article {
+  line-height: 1.85;
+
+  p {
+    margin: 1.15rem 0;
+  }
+
+  // 섹션 제목: 구분선으로 문단 덩어리 분리
+  h2 {
+    margin-top: 2.4rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--brutal-ink);
+  }
+
+  // 리스트 항목 간 숨통
+  ul li,
+  ol li {
+    margin: 0.6rem 0;
+  }
+  li::marker {
+    color: var(--brutal-violet);
+    font-weight: 800;
+  }
+
+  // 굵은 강조 = 형광펜 효과
+  strong {
+    background: linear-gradient(transparent 62%, rgba(214, 255, 63, 0.55) 38%);
+    padding: 0 0.08em;
+  }
+
+  // 인라인 코드 칩
+  p > code,
+  li > code {
+    border: 1px solid var(--lightgray);
+    padding: 0.05em 0.3em;
+    font-size: 0.85em;
+  }
+}
+[saved-theme="dark"] article strong {
+  background: linear-gradient(transparent 62%, rgba(214, 255, 63, 0.26) 38%);
+}
+
+// "한 줄 요약"/"Summary" 첫 문단 = 리드 카드
+article h2[id*="요약"] + p,
+article h2[id="summary"] + p {
+  border: var(--brutal-border);
+  border-left: 8px solid var(--brutal-lime);
+  box-shadow: var(--brutal-shadow);
+  padding: 1rem 1.2rem;
+  margin-top: 1rem;
+  font-size: 1.06rem;
+  font-weight: 500;
+}
+
+// 폴더 목록 페이지: 항목 간 간격 + 구분선
+ul.section-ul > li.section-li {
+  margin: 1.1rem 0;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px dashed var(--gray);
+}
+
 // ---------- 언어 토글 ----------
 .language-toggle {
   display: inline-block;
