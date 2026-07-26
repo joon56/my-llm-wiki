@@ -15,3 +15,7 @@ __pycache__/
 # 세션 아카이브는 로컬 전용 (사용자 결정 2026-07-26: repo 미포함)
 vault/90-Archive/claude-sessions/*
 !vault/90-Archive/claude-sessions/.gitkeep
+
+# claude.ai export 반입함 (원본은 로컬 전용)
+_dropbox/*
+!_dropbox/README.md

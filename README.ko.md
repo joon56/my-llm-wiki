@@ -58,7 +58,9 @@ LLM_WIKI/                        ← git 루트 (모노레포)
 │   ├── archive_session.py       # SessionEnd 훅 진입점
 │   ├── secret_scan.py           # 비밀정보 스캔 (CI 게이트 겸용)
 │   └── tests/                   # unittest 11개
+├── _dropbox/                    ← claude.ai export 반입함 (git 제외) → /ingest
 ├── .claude/commands/distill.md  # 주간 정제 루틴 커맨드
+├── .claude/commands/ingest.md   # claude.ai export 변환 루틴
 ├── .github/workflows/deploy.yml # 스캔 → 빌드 → Pages 배포
 └── docs/superpowers/            # 설계 스펙·구현 계획
 ```
@@ -127,6 +129,10 @@ py scripts/cc2obsidian.py --out vault/90-Archive/claude-sessions --min-prompts 3
 `--min-prompts`로 발화 수 적은 잡세션 필터, `--index`는 MOC 인덱스 노트 생성. 전체 옵션: `py scripts/cc2obsidian.py --help`
 
 </details>
+
+### 📥 /ingest — claude.ai 대화 반입
+
+**데스크톱 앱/claude.ai** 대화는 로컬 로그가 없어 공식 데이터 내보내기로 들여온다: claude.ai → 설정 → 개인정보 → **데이터 내보내기** → 이메일로 받은 zip(또는 `conversations.json`)을 `_dropbox/`에 넣고 → `/ingest` 실행. 대화는 `vault/90-Archive/claudeai/`로 변환되고(`status: raw`, 반복 export 간 UUID 중복 제거), 성공 처리된 원본은 `_dropbox/`에서 삭제된다. 상세: `_dropbox/README.md`.
 
 ### ⚗️ /distill — 주간 정제
 

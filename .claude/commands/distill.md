@@ -2,7 +2,7 @@
 description: 주간 정제 — raw 세션 노트를 분류하고 개념 노트로 승격
 ---
 
-vault/90-Archive/claude-sessions/ 에서 status가 raw인 노트 중 최근 10개를 읽고 정제하라.
+vault/90-Archive/ 전체(claude-sessions/ 및 claudeai/)에서 status가 raw인 노트 중 최근 10개를 읽고 정제하라.
 
 절차 (순서 엄수):
 1. 해당 노트 10개를 읽는다.

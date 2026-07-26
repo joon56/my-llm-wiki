@@ -58,7 +58,9 @@ LLM_WIKI/                        ← git root (monorepo)
 │   ├── archive_session.py       # SessionEnd hook entry point
 │   ├── secret_scan.py           # secret scanner (doubles as CI gate)
 │   └── tests/                   # 11 unit tests
+├── _dropbox/                    ← drop claude.ai exports here (gitignored) → /ingest
 ├── .claude/commands/distill.md  # weekly distill routine command
+├── .claude/commands/ingest.md   # claude.ai export converter routine
 ├── .github/workflows/deploy.yml # scan → build → Pages deploy
 └── docs/superpowers/            # design spec & implementation plan
 ```
@@ -127,6 +129,10 @@ py scripts/cc2obsidian.py --out vault/90-Archive/claude-sessions --min-prompts 3
 `--min-prompts` filters out low-signal sessions; `--index` also generates an MOC index note. Full options: `py scripts/cc2obsidian.py --help`
 
 </details>
+
+### 📥 /ingest — claude.ai conversations
+
+Claude **desktop app / claude.ai** conversations have no local logs, so they come in via the official data export: claude.ai → Settings → Privacy → **Export data** → drop the emailed zip (or `conversations.json`) into `_dropbox/` → run `/ingest`. Conversations are converted into `vault/90-Archive/claudeai/` (`status: raw`, deduplicated by UUID across repeated exports), then successfully processed files are removed from `_dropbox/`. See `_dropbox/README.md`.
 
 ### ⚗️ /distill — weekly distillation
 
