@@ -16,7 +16,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "ko-KR",
-    baseUrl: "example.github.io/llm-wiki",
+    baseUrl: "joon56.github.io/my-llm-wiki",
     ignorePatterns: ["private", "_templates", "90-Archive", ".obsidian", ".trash", "CLAUDE.md"],
     defaultDateType: "modified",
     theme: {

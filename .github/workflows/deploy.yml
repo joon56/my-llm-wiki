@@ -1,0 +1,41 @@
+name: Deploy LLM WIKI
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # Quartz가 git 날짜 사용
+      - name: Secret scan (HIGH면 배포 차단)
+        run: python3 scripts/secret_scan.py vault
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install
+        run: npm ci
+        working-directory: site
+      - name: Build
+        run: npx quartz build -d ../vault -o public
+        working-directory: site
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/public
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
