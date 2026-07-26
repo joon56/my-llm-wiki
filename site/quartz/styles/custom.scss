@@ -1,3 +1,93 @@
 @use "./base.scss";
+@use "./variables.scss" as *;
 
-// put your custom CSS here!
+// ---------- 폰트 (self-host) ----------
+@font-face {
+  font-family: "Pretendard Variable";
+  src: url("/static/fonts/PretendardVariable.woff2") format("woff2-variations");
+  font-weight: 45 920;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/static/fonts/JetBrainsMono[wght].woff2") format("woff2-variations");
+  font-weight: 100 800;
+  font-display: swap;
+}
+
+// ---------- 브루탈리즘 토큰 ----------
+:root {
+  --brutal-ink: #111111;
+  --brutal-lime: #d6ff3f;
+  --brutal-violet: #7c5cff;
+  --brutal-shadow: 4px 4px 0 var(--brutal-ink);
+  --brutal-border: 2px solid var(--brutal-ink);
+}
+[saved-theme="dark"] {
+  --brutal-ink: #f0efe9;
+  --brutal-violet: #9d85ff;
+  --brutal-shadow: 4px 4px 0 var(--brutal-lime);
+}
+
+// ---------- 타이포 ----------
+h1 { font-weight: 900; letter-spacing: -0.5px; text-transform: uppercase; }
+h2 { font-weight: 800; letter-spacing: -0.3px; }
+
+// ---------- 헤더/사이트명 ----------
+.page-title a {
+  background: var(--dark);
+  color: var(--brutal-lime) !important;
+  padding: 0.2rem 0.6rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+// ---------- 위키링크 ----------
+a.internal {
+  background-color: var(--brutal-lime);
+  color: #111111 !important;
+  border: 1px solid #111111;
+  border-radius: 0;
+  padding: 0 0.2rem;
+  font-weight: 700;
+  &:hover { background-color: var(--brutal-violet); color: #fff !important; }
+}
+
+// ---------- 코드 블록 ----------
+figure[data-rehype-pretty-code-figure] pre,
+pre {
+  border: var(--brutal-border);
+  border-radius: 0;
+  box-shadow: var(--brutal-shadow);
+}
+code { border-radius: 0; }
+
+// ---------- 콜아웃 ----------
+.callout {
+  border: var(--brutal-border);
+  border-radius: 0;
+  box-shadow: 3px 3px 0 var(--brutal-violet);
+}
+
+// ---------- 검색/탐색기/그래프 패널 ----------
+.search .search-bar,
+.search-container .search-space,
+.graph .graph-outer,
+.backlinks {
+  border: var(--brutal-border) !important;
+  border-radius: 0 !important;
+}
+.graph .graph-outer { box-shadow: var(--brutal-shadow); }
+
+// ---------- 태그 ----------
+a.tag-link {
+  background: var(--brutal-violet);
+  color: #ffffff !important;
+  border-radius: 0;
+  padding: 0 0.4rem;
+  font-weight: 700;
+  border: 1px solid var(--brutal-ink);
+}
+
+// ---------- ==하이라이트== 다크모드 가독성 ----------
+.text-highlight { color: #111111; }
