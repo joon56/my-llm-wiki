@@ -23,6 +23,8 @@ def main() -> int:
     args = ap.parse_args()
     out_root = Path(args.out)
     try:
+        if hasattr(sys.stdin, "reconfigure"):
+            sys.stdin.reconfigure(encoding="utf-8")
         payload = json.load(sys.stdin)
         tp = payload.get("transcript_path")
         if tp and Path(tp).is_file():
