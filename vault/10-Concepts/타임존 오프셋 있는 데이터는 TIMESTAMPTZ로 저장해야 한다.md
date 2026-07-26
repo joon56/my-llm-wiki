@@ -3,7 +3,7 @@ title: 타임존 오프셋 있는 데이터는 TIMESTAMPTZ로 저장해야 한�
 tags:
   - dev/db
 status: distilled
-publish: false
+publish: true
 created: 2026-07-26
 sources:
   - "[[2026-07-16 ide_opened_fileThe user opened the file chealthcaredocsDATA_ (261ec49a)]]"

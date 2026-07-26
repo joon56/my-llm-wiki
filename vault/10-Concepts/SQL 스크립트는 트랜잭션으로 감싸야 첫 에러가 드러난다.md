@@ -4,7 +4,7 @@ tags:
   - dev/db
   - dev/debugging
 status: distilled
-publish: false
+publish: true
 created: 2026-07-26
 sources:
   - "[[2026-07-16 ide_opened_fileThe user opened the file chealthcaredocsDATA_ (261ec49a)]]"

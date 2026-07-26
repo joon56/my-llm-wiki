@@ -3,7 +3,7 @@ title: gitignore는 이미 추적된 파일을 막지 못한다
 tags:
   - tool/git
 status: distilled
-publish: false
+publish: true
 created: 2026-07-26
 sources:
   - "[[2026-07-15 ide_opened_fileThe user opened the file chealthcareCLAUDE.md (e0e1d313)]]"

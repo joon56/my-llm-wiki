@@ -4,7 +4,7 @@ tags:
   - dev/frontend
   - dev/debugging
 status: distilled
-publish: false
+publish: true
 created: 2026-07-26
 sources:
   - "[[2026-07-16 command-nameclearcommand-name command-messageclearcommand-me (224d8bea)]]"
