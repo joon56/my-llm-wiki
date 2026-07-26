@@ -17,6 +17,11 @@ Entry points by topic. As concept notes accumulate, they get sorted and linked h
 ## Prompting
 
 - [[Prompt Caching]]
+- [[Prompt Overload Makes Small LLMs Narrate Instead of Calling Tools]]
+
+## Local LLMs & Agents
+
+- [[Small LLM Tool Chaining Is Solved by Agent Separation, Not Prompting]]
 
 ## Fine-tuning
 
@@ -58,3 +63,9 @@ Entry points by topic. As concept notes accumulate, they get sorted and linked h
 
 - [[gitignore Does Not Stop Already-Tracked Files]]
 - [[External URL References in CLAUDE.md Are Not Auto-Loaded]]
+- [[claude.ai and Claude Code Have Separate Skill and Plugin Systems]]
+
+## Automation & Pipelines
+
+- [[Secret Scans Must Fail the Pipeline, Not Just Warn]]
+- [[The Recursive Contamination Trap of Tools That Consume Their Own Logs]]
