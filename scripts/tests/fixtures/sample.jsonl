@@ -1,0 +1,6 @@
+{"type":"summary","summary":"RAG 파이프라인 디버깅"}
+{"type":"user","cwd":"/home/u/myapp","timestamp":"2026-07-01T10:00:00Z","message":{"content":"임베딩이 왜 느리지?"}}
+{"type":"assistant","timestamp":"2026-07-01T10:00:05Z","message":{"content":[{"type":"text","text":"배치 크기부터 확인합니다."},{"type":"tool_use","name":"Bash","input":{"command":"python bench.py"}}]}}
+{이건 깨진 JSON 줄}
+{"type":"user","timestamp":"2026-07-01T10:01:00Z","message":{"content":[{"type":"tool_result","content":"ok"}]}}
+{"type":"user","timestamp":"2026-07-01T10:02:00Z","message":{"content":"배치 64로 바꿨더니 해결"}}
