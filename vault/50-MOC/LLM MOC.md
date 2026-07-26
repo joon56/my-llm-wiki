@@ -3,6 +3,8 @@ title: LLM MOC
 tags:
   - moc
 publish: true
+lang: ko
+translation: en/50-MOC/LLM-MOC-(EN)
 created: 2026-07-26
 ---
 

@@ -1,6 +1,8 @@
 ---
 title: LLM WIKI
 publish: true
+lang: ko
+translation: en/index
 created: 2026-07-26
 ---
 
