@@ -58,12 +58,20 @@ Entry points by topic. As concept notes accumulate, they get sorted and linked h
 - [[Never Trust PDF Table Extraction Without Cross-Checking the Prose]]
 - [[Joint Test Significance Is Not the Same as Individual Coefficient Significance]]
 - [[Photo Conventions for Academic and Big Tech Career Documents Abroad]]
+- [[Port Psychometric Instruments by Behavioral Proxies, Not Item Translation]]
+
+## Product & MVP
+
+- [[Each MVP Round Tests One Core Risk Hypothesis]]
+- [[Infer Unmeasurable Phenomena from Combined Indirect Signals]]
+- [[Judge Tool Overlap by Output Type, Not Category Labels]]
 
 ## Tools
 
 - [[gitignore Does Not Stop Already-Tracked Files]]
 - [[External URL References in CLAUDE.md Are Not Auto-Loaded]]
 - [[claude.ai and Claude Code Have Separate Skill and Plugin Systems]]
+- [[Windows PowerShell Execution Policy Blocks npm Global CLIs]]
 
 ## Automation & Pipelines
 

@@ -15,7 +15,7 @@ tags:
 > [!info] claude.ai 대화 원본입니다. 배운 것은 개념 노트로 옮기고, 여기엔 링크만 거세요.
 
 **정제 메모**
-- 핵심 교훈:: [[claude.ai와 Claude Code는 스킬·플러그인 체계가 분리되어 있다]]
+- 핵심 교훈:: [[claude.ai와 Claude Code는 스킬·플러그인 체계가 분리되어 있다]], [[Windows PowerShell 실행 정책이 npm 전역 CLI를 차단한다]]
 - 관련 노트:: 
 
 ---
