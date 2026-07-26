@@ -159,6 +159,34 @@ ul.section-ul > li.section-li {
   border-bottom: 1px dashed var(--gray);
 }
 
+// ---------- 탐색기(사이드바) 항목 가독성 ----------
+.explorer-content ul li > a {
+  display: block;
+  padding: 0.3rem 0.45rem;
+  margin: 0.12rem 0;
+  line-height: 1.5;
+  font-size: 0.84rem;
+  border-left: 3px solid transparent;
+
+  &:hover {
+    background-color: rgba(214, 255, 63, 0.4);
+    border-left-color: var(--brutal-ink);
+    opacity: 1;
+    text-decoration: none;
+  }
+
+  &.active {
+    border-left-color: var(--brutal-violet);
+    background-color: rgba(124, 92, 255, 0.12);
+    font-weight: 700;
+  }
+}
+
+// 폴더 하위 목록 세로 가이드 강조
+.explorer-content .folder-outer > ul {
+  border-left: 2px solid var(--gray);
+}
+
 // ---------- 언어 토글 ----------
 .language-toggle {
   display: inline-block;
