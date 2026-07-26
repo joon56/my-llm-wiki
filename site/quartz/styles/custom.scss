@@ -36,6 +36,18 @@ h1 { font-weight: 900; letter-spacing: -0.5px; text-transform: uppercase; }
 h2 { font-weight: 800; letter-spacing: -0.3px; }
 
 // ---------- 헤더/사이트명 ----------
+.page-title {
+  // 어깨선: 로고 위 이름 라벨
+  &::before {
+    content: "MINJOON YOO";
+    display: block;
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 0.22em;
+    color: var(--gray);
+    margin-bottom: 0.35rem;
+  }
+}
 .page-title a {
   background: var(--dark);
   color: var(--brutal-lime) !important;
@@ -96,6 +108,32 @@ a.internal.tag-link {
 
 // ---------- ==하이라이트== 다크모드 가독성 ----------
 .text-highlight { color: #111111; }
+
+// ---------- 배경 벗기는 컨텍스트의 글자색 복원 (다크모드 비가시 버그 수정) ----------
+// backlinks/listPage/recentNotes 컴포넌트는 a.internal의 배경만 transparent로
+// 덮는다(높은 특이도). 칩용 고정 잉크색(#111)이 남으면 다크모드에서 안 보이므로
+// 이 컨텍스트에서는 테마 변수 색 + 칩 장식 제거로 복원한다.
+.backlinks > ul.overflow > li > a,
+li.section-li .section .desc h3 > a,
+.recent-notes .section .desc h3 > a {
+  color: var(--secondary) !important;
+  border: none;
+  padding: 0;
+  font-weight: 700;
+
+  &:hover {
+    color: var(--tertiary) !important;
+    background-color: transparent;
+  }
+}
+
+// 제목 옆 앵커 아이콘: 칩 스타일 제거 (라임 박스로 보이던 것)
+a.internal[role="anchor"] {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: var(--gray) !important;
+}
 
 // ---------- 본문 가독성 (노트 페이지) ----------
 article {
