@@ -8,6 +8,8 @@
   font-weight: 45 920;
   font-display: swap;
 }
+// self-hosted from JetBrains/JetBrainsMono@master (unreleased at time of fetch,
+// v2.304 has no variable woff2), pinned to commit 1937130 for auditability
 @font-face {
   font-family: "JetBrains Mono";
   src: url("/static/fonts/JetBrainsMono[wght].woff2") format("woff2-variations");
@@ -80,7 +82,10 @@ code { border-radius: 0; }
 .graph .graph-outer { box-shadow: var(--brutal-shadow); }
 
 // ---------- 태그 ----------
-a.tag-link {
+// specificity raised to match TagList.tsx's injected `a.internal.tag-link` rule
+// (0,2,1) — custom.scss loads after component CSS in componentResources.ts, so
+// equal specificity plus later source order wins the cascade.
+a.internal.tag-link {
   background: var(--brutal-violet);
   color: #ffffff !important;
   border-radius: 0;
