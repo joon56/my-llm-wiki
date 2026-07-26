@@ -4,6 +4,8 @@ tags:
   - dev/db
 status: distilled
 publish: true
+lang: ko
+translation: en/10-Concepts/Store-Timezone-Offset-Data-as-TIMESTAMPTZ
 created: 2026-07-26
 sources:
   - "[[2026-07-16 ide_opened_fileThe user opened the file chealthcaredocsDATA_ (261ec49a)]]"

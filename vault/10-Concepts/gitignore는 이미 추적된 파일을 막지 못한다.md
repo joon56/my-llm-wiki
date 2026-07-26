@@ -4,6 +4,8 @@ tags:
   - tool/git
 status: distilled
 publish: true
+lang: ko
+translation: en/10-Concepts/gitignore-Does-Not-Stop-Already-Tracked-Files
 created: 2026-07-26
 sources:
   - "[[2026-07-15 ide_opened_fileThe user opened the file chealthcareCLAUDE.md (e0e1d313)]]"

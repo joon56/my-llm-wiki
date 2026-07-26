@@ -20,4 +20,41 @@ Entry points by topic. As concept notes accumulate, they get sorted and linked h
 
 ## Fine-tuning
 
+## Dev — Security
+
+- [[Authorization Must Not Trust Client Input]]
+- [[Refresh Token Rotation Is Vulnerable to Concurrent Calls]]
+
+## Dev — Database
+
+- [[Wrap SQL Scripts in a Transaction to Surface the First Error]]
+- [[Store Timezone-Offset Data as TIMESTAMPTZ]]
+
+## Dev — Debugging & Verification
+
+- [[Verify Background Process Termination by Checking the Port]]
+- [[Verify Backup Creation Immediately After Running a Destructive Script]]
+- [[DOM Measurements Outrank Visual Overflow Judgments]]
+- [[Verify Accessibility Contrast by Calculation Rather Than by Eye]]
+
+## Dev — Architecture
+
+- [[Data Architecture That Generates Derivatives From a Single Source of Truth]]
+- [[Client-Persisted IDs Are Immutable Contracts]]
+- [[Verify Version Drift Between Planning Docs and Final Deliverables]]
+
+## Design & UX
+
+- [[Why High-Contrast Brutalist UI Does Not Suit Long-Form Content]]
+- [[Speed Up Design Consensus With Mockups Instead of Verbal Descriptions]]
+
+## Research & Writing
+
+- [[Never Trust PDF Table Extraction Without Cross-Checking the Prose]]
+- [[Joint Test Significance Is Not the Same as Individual Coefficient Significance]]
+- [[Photo Conventions for Academic and Big Tech Career Documents Abroad]]
+
 ## Tools
+
+- [[gitignore Does Not Stop Already-Tracked Files]]
+- [[External URL References in CLAUDE.md Are Not Auto-Loaded]]

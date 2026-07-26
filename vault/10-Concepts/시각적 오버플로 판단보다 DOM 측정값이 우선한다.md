@@ -5,6 +5,8 @@ tags:
   - dev/debugging
 status: distilled
 publish: true
+lang: ko
+translation: en/10-Concepts/DOM-Measurements-Outrank-Visual-Overflow-Judgments
 created: 2026-07-26
 sources:
   - "[[2026-07-16 command-nameclearcommand-name command-messageclearcommand-me (224d8bea)]]"

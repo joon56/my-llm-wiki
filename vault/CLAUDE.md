@@ -12,6 +12,7 @@ Obsidian 기반 개인 LLM 위키. 모든 파일은 마크다운. Quartz 4로 �
 - `90-Archive/` 는 자동 생성물. 수정 금지. 읽기만. 발행 절대 금지.
 - 태그는 계층형: `llm/rag`, `llm/finetuning`, `tool/claude-code`
 - 새 노트는 `_templates/` 형식을 따름.
+- **발행(`publish: true`) 노트는 영어판을 함께 유지한다**: `vault/en/` 미러 경로 + frontmatter `lang`/`translation` 짝 연결 (KR/EN 토글용). 비발행 노트는 번역 불필요.
 
 ## 자주 쓰는 작업
 - 정제(/distill): 90-Archive 로그 → 10-Concepts 개념 노트로 승격

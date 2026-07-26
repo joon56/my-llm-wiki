@@ -5,6 +5,8 @@ tags:
   - research/writing
 status: distilled
 publish: true
+lang: ko
+translation: en/10-Concepts/Never-Trust-PDF-Table-Extraction-Without-Cross-Checking-the-Prose
 created: 2026-07-26
 sources:
   - "[[2026-07-25 I need an English write-up of a research paper of mine, for (fce4a47b)]]"

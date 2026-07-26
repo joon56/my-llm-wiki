@@ -4,6 +4,8 @@ tags:
   - tool/claude-code
 status: distilled
 publish: true
+lang: ko
+translation: en/10-Concepts/External-URL-References-in-CLAUDE.md-Are-Not-Auto-Loaded
 created: 2026-07-26
 sources:
   - "[[2026-07-16 command-messageandrej-karpathy-skillskarpathy-guidelinescomm (bbe5b12c)]]"

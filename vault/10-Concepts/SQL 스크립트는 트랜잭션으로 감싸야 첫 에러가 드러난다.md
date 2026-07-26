@@ -5,6 +5,8 @@ tags:
   - dev/debugging
 status: distilled
 publish: true
+lang: ko
+translation: en/10-Concepts/Wrap-SQL-Scripts-in-a-Transaction-to-Surface-the-First-Error
 created: 2026-07-26
 sources:
   - "[[2026-07-16 ide_opened_fileThe user opened the file chealthcaredocsDATA_ (261ec49a)]]"
