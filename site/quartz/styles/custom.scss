@@ -28,7 +28,8 @@
 [saved-theme="dark"] {
   --brutal-ink: #f0efe9;
   --brutal-violet: #9d85ff;
-  --brutal-shadow: 4px 4px 0 var(--brutal-lime);
+  // 다크 = 네온사인: 하드 섀도 대신 글로우
+  --brutal-shadow: 0 0 14px rgba(214, 255, 63, 0.28);
 }
 
 // ---------- 타이포 ----------
@@ -237,4 +238,105 @@ ul.section-ul > li.section-li {
   font-weight: 700;
   text-decoration: none;
   &:hover { background-color: var(--brutal-violet); color: #fff !important; }
+}
+
+// ==================================================================
+// 다크모드 = 사이버펑크 네온사인 (라이트는 브루탈리즘 포스터 유지)
+// 원칙: 채움(fill) 제거 → 발광(glow) 텍스트/테두리로 전환
+// ==================================================================
+[saved-theme="dark"] {
+  // 로고 = 네온 간판
+  .page-title a {
+    background: transparent;
+    border: 2px solid rgba(214, 255, 63, 0.55);
+    text-shadow: 0 0 10px rgba(214, 255, 63, 0.65);
+    box-shadow: 0 0 14px rgba(214, 255, 63, 0.25), inset 0 0 8px rgba(214, 255, 63, 0.12);
+  }
+
+  // 위키링크 = 네온 라임 발광 텍스트 (앵커 아이콘·태그 제외)
+  a.internal:not(.tag-link):not([role="anchor"]) {
+    background: transparent;
+    color: var(--brutal-lime) !important;
+    border: 1px solid rgba(214, 255, 63, 0.45);
+    text-shadow: 0 0 7px rgba(214, 255, 63, 0.5);
+
+    &:hover {
+      background: transparent;
+      color: var(--brutal-violet) !important;
+      border-color: rgba(157, 133, 255, 0.7);
+      text-shadow: 0 0 9px rgba(157, 133, 255, 0.85);
+    }
+  }
+
+  // 태그 = 바이올렛 네온
+  a.internal.tag-link {
+    background: transparent;
+    color: var(--brutal-violet) !important;
+    border: 1px solid rgba(157, 133, 255, 0.6);
+    text-shadow: 0 0 6px rgba(157, 133, 255, 0.6);
+  }
+
+  // 섹션 제목: 네온 언더라인
+  article h2 {
+    border-bottom-color: rgba(214, 255, 63, 0.45);
+    box-shadow: 0 10px 14px -12px rgba(214, 255, 63, 0.4);
+  }
+  article h1 {
+    text-shadow: 0 0 12px rgba(214, 255, 63, 0.3);
+  }
+
+  // 요약 리드 카드: 글로우 프레임
+  article h2[id*="요약"] + p,
+  article h2[id="summary"] + p {
+    border-color: rgba(240, 239, 233, 0.25);
+    border-left-color: var(--brutal-lime);
+  }
+
+  // 굵은 강조: 형광펜 → 발광 텍스트
+  article strong {
+    background: none;
+    color: #eaffb0;
+    text-shadow: 0 0 8px rgba(214, 255, 63, 0.55);
+  }
+
+  // 코드 블록·콜아웃: 글로우 테두리
+  figure[data-rehype-pretty-code-figure] pre,
+  pre {
+    border-color: rgba(240, 239, 233, 0.3);
+  }
+  .callout {
+    box-shadow: 0 0 12px rgba(157, 133, 255, 0.3);
+  }
+
+  // 패널(검색·그래프·백링크): 바이올렛 글로우 프레임
+  .search .search-bar,
+  .search-container .search-space,
+  .graph .graph-outer,
+  .backlinks {
+    border: 1px solid rgba(157, 133, 255, 0.5) !important;
+    box-shadow: 0 0 12px rgba(157, 133, 255, 0.22);
+  }
+
+  // 탐색기 호버: 채움 → 네온 텍스트
+  .explorer-content ul li > a:hover {
+    background-color: transparent;
+    border-left-color: var(--brutal-lime);
+    color: var(--brutal-lime);
+    text-shadow: 0 0 7px rgba(214, 255, 63, 0.5);
+  }
+
+  // 언어 토글: 네온 아웃라인
+  .language-toggle {
+    background-color: transparent;
+    border-color: rgba(214, 255, 63, 0.55);
+    color: var(--brutal-lime) !important;
+    text-shadow: 0 0 7px rgba(214, 255, 63, 0.5);
+
+    &:hover {
+      background-color: transparent;
+      border-color: rgba(157, 133, 255, 0.7);
+      color: var(--brutal-violet) !important;
+      text-shadow: 0 0 9px rgba(157, 133, 255, 0.85);
+    }
+  }
 }
