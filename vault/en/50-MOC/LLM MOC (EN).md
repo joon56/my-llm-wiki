@@ -50,6 +50,7 @@ Entry points by topic. As concept notes accumulate, they get sorted and linked h
 
 ## Dev — Debugging & Verification
 
+- [[JS-Rendered Sites Are a Blind Spot for Static Fetch Verification]]
 - [[Verify Background Process Termination by Checking the Port]]
 - [[Verify Backup Creation Immediately After Running a Destructive Script]]
 - [[DOM Measurements Outrank Visual Overflow Judgments]]
@@ -61,6 +62,7 @@ Entry points by topic. As concept notes accumulate, they get sorted and linked h
 
 - [[Data Architecture That Generates Derivatives From a Single Source of Truth]]
 - [[Client-Persisted IDs Are Immutable Contracts]]
+- [[Seed Migrations Separate Content Updates From User State]]
 - [[Verify Version Drift Between Planning Docs and Final Deliverables]]
 - [[A Single HTML File With Base64 Assets Is Deployment Without a Server]]
 - [[Notebooks Are Artifacts - the Source Is a Generator Script]]
@@ -117,6 +119,8 @@ Entry points by topic. As concept notes accumulate, they get sorted and linked h
 
 ## Automation & Pipelines
 
+- [[Split Web Research Into Verifier and Discovery Agents]]
+- [[Passed Deadlines Get Extended - Schedule Facts Need Re-Verification]]
 - [[Secret Scans Must Fail the Pipeline, Not Just Warn]]
 - [[The Recursive Contamination Trap of Tools That Consume Their Own Logs]]
 - [[A Pipeline That Turns YouTube Videos Into LLM-Readable Material]]
