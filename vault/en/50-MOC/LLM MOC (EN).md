@@ -35,6 +35,14 @@ Entry points by topic. As concept notes accumulate, they get sorted and linked h
 - [[Compare Small-Data Neural Nets With Multi-Seed Averages]]
 - [[Reverse-Engineer Undocumented Datasets With Statistics]]
 
+## ML Experiment Methodology
+
+- [[A Leaderboard Submission Is a Pre-Registered Experiment]]
+- [[Switch Components Off on Purpose to Map Real-Data Loss]]
+- [[Measure the Oracle Ceiling Before Implementing]]
+- [[Swapping the Model Class Beats Adding Knobs]]
+- [[Ask About Ambiguous Rules as a Pre-Approval Question]]
+
 ## Dev — Security
 
 - [[Authorization Must Not Trust Client Input]]
@@ -42,11 +50,13 @@ Entry points by topic. As concept notes accumulate, they get sorted and linked h
 - [[Secrets Pasted Into Chat Persist in Session Logs]]
 - [[Pre-Publication PII and License Sweep Checklist]]
 - [[Remove PDF PII With True Redaction, Not Overlays]]
+- [[Unfiltered Queries That Lean on RLS Leak on Admin Accounts]]
 
 ## Dev — Database
 
 - [[Wrap SQL Scripts in a Transaction to Surface the First Error]]
 - [[Store Timezone-Offset Data as TIMESTAMPTZ]]
+- [[Sorting by a Sum Aggregate Lets Duplicate Rows Inflate Rankings]]
 
 ## Dev — Debugging & Verification
 
@@ -71,6 +81,11 @@ Entry points by topic. As concept notes accumulate, they get sorted and linked h
 
 - [[Why High-Contrast Brutalist UI Does Not Suit Long-Form Content]]
 - [[Speed Up Design Consensus With Mockups Instead of Verbal Descriptions]]
+
+## Collaboration & Meetings
+
+- [[Blank-Slate Questions Invite Silence - Ask With Options]]
+- [[Meetings Are for Choosing, Not for Generating Ideas]]
 
 ## Research & Writing
 
@@ -116,6 +131,7 @@ Entry points by topic. As concept notes accumulate, they get sorted and linked h
 - [[Parallelize ML Experiments With Background Execution]]
 - [[Same-URL Artifact Redeployment Enables Incremental Approval]]
 - [[Codify Constraints as Forbidden-Allowed Lists Before Work]]
+- [[superpowers Is a Work Habit, GSD Is a Project Framework]]
 
 ## Automation & Pipelines
 
