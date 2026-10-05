@@ -249,13 +249,24 @@ def note_target(sess: dict, out_root: Path) -> Path:
     return Path(out_root) / sanitize(sess["project"] or "unknown", 40) / fname
 
 
+def is_curated(note: Path) -> bool:
+    """Existing note whose status moved past raw (triaged/distilled) — never overwrite it."""
+    if not note.is_file():
+        return False
+    head = note.read_text(encoding="utf-8").split("\n---", 1)[0]
+    return any(line.startswith("status:") and line.split(":", 1)[1].strip() != "raw"
+               for line in head.splitlines())
+
+
 def convert_one(jsonl_path: Path, out_root: Path,
                 max_chars: int = 40000, min_prompts: int = 1) -> Path | None:
-    """단일 세션 변환. 훅(archive_session.py)에서 사용. 조건 미달이면 None."""
+    """단일 세션 변환. 훅(archive_session.py)에서 사용. 조건 미달 또는 정제된 노트면 None."""
     sess = parse_session(Path(jsonl_path))
     if not sess or sess["n_user"] < min_prompts:
         return None
     target = note_target(sess, Path(out_root))
+    if is_curated(target):
+        return None
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(render_note(sess, max_chars), encoding="utf-8")
     return target
@@ -320,6 +331,9 @@ def main() -> int:
             continue
 
         target = note_target(sess, out)
+        if is_curated(target):
+            skipped += 1
+            continue
 
         if args.dry_run:
             print(f"  → {target.relative_to(out)}  [{sess['n_turns']} turns]")

@@ -34,6 +34,21 @@ class TestConvertOne(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td:
             self.assertIsNone(convert_one(FIXTURE, Path(td), min_prompts=5))
 
+    def test_raw_note_is_refreshed(self):
+        with tempfile.TemporaryDirectory() as td:
+            out = convert_one(FIXTURE, Path(td))
+            out.write_text("---\nstatus: raw\n---\nstale", encoding="utf-8")
+            self.assertEqual(convert_one(FIXTURE, Path(td)), out)
+            self.assertNotIn("stale", out.read_text(encoding="utf-8"))
+
+    def test_curated_note_is_preserved(self):
+        with tempfile.TemporaryDirectory() as td:
+            out = convert_one(FIXTURE, Path(td))
+            curated = "---\nstatus: distilled\n---\n- 핵심 교훈:: [[Some Note]]"
+            out.write_text(curated, encoding="utf-8")
+            self.assertIsNone(convert_one(FIXTURE, Path(td)))
+            self.assertEqual(out.read_text(encoding="utf-8"), curated)
+
 
 if __name__ == "__main__":
     unittest.main()

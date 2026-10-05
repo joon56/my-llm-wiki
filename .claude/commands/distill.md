@@ -5,6 +5,7 @@ description: 주간 정제 — raw 세션 노트를 분류하고 개념 노트�
 vault/90-Archive/ 전체(claude-sessions/ 및 claudeai/)에서 status가 raw인 노트 중 최근 10개를 읽고 정제하라.
 
 절차 (순서 엄수):
+0. 누락 세션 자동 수집 (SessionEnd 훅이 침묵 실패해도 아카이브가 끊기지 않도록): `vault/90-Archive/claude-sessions/` 안 노트들의 가장 최근 `date:`를 기준일로 잡고 `py -X utf8 scripts/cc2obsidian.py --out vault/90-Archive/claude-sessions --since <기준일>`을 실행한다. triaged/distilled 노트는 변환기가 덮어쓰지 않고, raw 노트는 최신 내용으로 갱신된다. 새로 생긴 노트 개수를 보고한다 — 기준일 이후 세션이 있었는데 새 노트가 생겼다면 SessionEnd 훅이 실패 중이라는 뜻이니 함께 알린다.
 1. 해당 노트 10개를 읽는다.
 2. "재사용 가능한 교훈 유/무" 분류표만 먼저 제시한다 (한 줄 근거 포함). 이 단계에서 파일 생성 금지.
 3. 교훈 없음 → 해당 노트의 프로퍼티만 `status: triaged`로 변경.
