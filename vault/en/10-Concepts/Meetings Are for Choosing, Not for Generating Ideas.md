@@ -23,6 +23,7 @@ If everyone brings a different idea and the meeting tries to merge them, it drif
 - Sequence instead of eliminate: sorting into "this term / next term / on hold" discards nothing, so contributors do not feel rejected.
 - On a split, pilot or sequence instead of compromising: "try it this term and revisit", "A first, then B depending on response". Reversible decisions draw less opposition.
 - Shape of a decision: decision + one-line rationale + owner + deadline. Without an owner and a deadline, it is not a decision.
+- When minutes come in, audit them against that shape. Only one item had an owner and a date; all six review items lacked "who, by when", and "next steps" read "none" — flagged right away as a sure way to still be "under review" at the next meeting. Items with an ambiguous target (a program they attend, or a program they run?) get pinned down with a question too.
 
 ## Sources
 

@@ -24,6 +24,8 @@ sources: []
 - Fix 4 - frame written input too: even a free-form reflection gets three slots (overall take / what worries you / what you will do), an explicit "none is a valid answer", and a deadline.
 - Same for feedback: replace "what do you think?" with a narrowed question ("is it lack of interest, or lack of a role?").
 - Principle: a few people (facilitator, core members) generate; the many converge by reacting.
+- The same holds when an agent needs decisions from the user: listing pending items by ID alone (K-21, D-36) drew "write it in sentences, even short ones, not code numbers". Switching to "recommended option + one-line reason + a one-word reply (e.g. 'as recommended', 'D-80 OK')" collapsed each decision into a single word.
+- Remove the generation burden from execution instructions too: a field guide with diagrams, a calculator, trial checklists, and per-block remote checks came back with "too complicated — what do I actually do on site?", so it shrank to "only record on site; check, organize, and send from home; redo problem trials on the reserve day", plus an order of what can be dropped (sensors > main video > log sheet > secondary camera). A camera-placement instruction compressed into one line, rewritten as a layout diagram with item-by-item notes, also exposed an ambiguous phrase in the original and a storage miscalculation (3 GB → 5 GB or more).
 
 ## Sources
 

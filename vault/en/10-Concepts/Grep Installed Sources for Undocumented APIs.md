@@ -24,6 +24,7 @@ For a locally installed tool, the installed code itself is the authoritative doc
 - Principle: route definitions and handler signatures of a locally installed tool sit right there in the code, so "not documented" does not mean "not possible".
 - Search order: (1) check official docs/skills, (2) grep the install path for route and command strings, (3) verify the signature, then call it directly.
 - Unlike remote web APIs, local tools ship their source, so this always works and there is no version mismatch — you are reading the exact code that is running.
+- A second case: the Firebase CLI's non-interactive login link expired within minutes with "Unable to verify client". Reading the installed firebase-tools source turned up two workable paths — `firebase login <auth code>` resuming the pending session (code verifier) saved in its config file, and calling `loginGoogle(true)` and `recordCredentials()` from `lib/auth` directly with node, which completes via this PC's browser and a localhost callback with no code pasting. The re-login procedure went into memory.
 
 ## Sources
 

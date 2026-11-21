@@ -7,7 +7,7 @@ tags:
 status: distilled
 publish: true
 lang: ko
-translation: en/10-Concepts/Compare-Tool-Profiles-by-Install-Plan-Diff-Not-Module-Names
+translation: en/10-Concepts/Compare-Tool-Profiles-by-Install-Plan-Diff,-Not-Module-Names
 created: 2026-08-04
 sources:
   - "[[2026-07-15 claude-code-skills-guide.md 읽고, 지금 설치 안 된 taste-skill Matt P (4a82016f)]]"

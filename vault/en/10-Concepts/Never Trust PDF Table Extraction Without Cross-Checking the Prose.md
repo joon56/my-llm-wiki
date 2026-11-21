@@ -21,6 +21,8 @@ PDF text-extraction tools like pdftotext scramble table columns — treat any nu
 - Why it's dangerous: the scrambled output still looks like a plausible sequence of numbers, so there's no visual cue that anything went wrong. Quoting it directly means reporting the value of a different variable.
 - How to verify: papers and reports often restate key figures in prose ("the coefficient was 0.42 and significant") — cross-check the extracted table value against that sentence. If there's no restatement, open the PDF and read the table by eye.
 - Generalization: treat any data that has passed through a structure-losing conversion (table → text, layout → plain text) as provisional until it's been verified through an independent path.
+- If a table is an image, text extraction gets nothing at all: render the page at high resolution and transcribe it, have a separate agent transcribe the same table again with no expected values, and diff the two transcriptions by machine (double entry). Two S-boxes (512 cells) matched, and exactly one cell differing from the standard was confirmed.
+- Then check the transcription once more for internal consistency (is the inverse table really the inverse, is it a permutation) and against an external reference (standard test vectors) — [[Verify Textbook and Spec Tables With Structural Invariants and a Reference Model]].
 
 ## Sources
 -

@@ -23,6 +23,7 @@ On small data, seed variance can exceed the effect you are measuring — a singl
 - Principle: neural-net training is stochastic in initialization and shuffling, and this variance grows as data shrinks. When seed variance exceeds the effect size under comparison, a single-run score is noise.
 - This is the experimental version of the statistics rule "claim only at the unit you tested" — one run of one seed does not license a claim about which configuration is better.
 - Working rule: small-data experiment reports should state the number of seeds and the mean (and variance where possible).
+- Not just seeds: the split scheme also sways small-sample estimates. Under leave-one-group-out CV (holding out one group of samples from the same problem at a time), even an information-free (null) feature was scored well below chance. The fix was group 5-fold repeated 20 times, with a null feature run through the same CV first to size the bias and feature sets read only relative to each other (sibling problems generated from the same template were kept in the same fold to prevent leakage).
 
 ## Sources
 

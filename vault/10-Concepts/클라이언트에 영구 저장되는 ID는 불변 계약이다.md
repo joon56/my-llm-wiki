@@ -9,6 +9,7 @@ translation: en/10-Concepts/Client-Persisted-IDs-Are-Immutable-Contracts
 created: 2026-07-26
 sources:
   - "[[2026-07-24 이 폴더에 master_files 폴더 안에 3가지 파일이 들어 있어. 모두 IT 관련 대외 활동에 대한 실 (192be639)]]"
+  - "[[2026-11-06 ide_opened_fileThe user opened the file cUsersUSERDesktop모프 (bff996c4)]]"
 ---
 
 ## 한 줄 요약
@@ -24,8 +25,10 @@ sources:
   - 생성 후 불변인 별도 식별자(연번, UUID)를 부여하고, 표시용 이름과 분리
   - "이 값이 사용자 기기에 저장되는가?"를 스키마 변경 전 체크리스트에 포함
 - 이미 배포했다면: 옛 ID → 새 ID 매핑 테이블을 영구히 유지하는 것 외에 방법이 없음. 처음부터 안 바꾸는 게 압도적으로 싸다.
+- 앱 패키지명(applicationId)도 같은 계약이다: 바꾸면 기존 설치본은 업데이트되지 않고 별개 앱으로 남으며, 백엔드 앱 재등록·서명 지문 재등록·설정 파일 교체가 따라온다. 그래서 앱 이름을 바꿀 때 설치자가 적은 초기에 패키지명까지 한 번에 바꿨고, 아예 바꿀 수 없는 클라우드 프로젝트 ID는 표시 이름만 바꿨다.
 
 ## 출처
 
 - [[2026-07-24 이 폴더에 master_files 폴더 안에 3가지 파일이 들어 있어. 모두 IT 관련 대외 활동에 대한 실 (192be639)]]
+- [[2026-11-06 ide_opened_fileThe user opened the file cUsersUSERDesktop모프 (bff996c4)]]
 - 관련: [[단일 원본에서 파생물을 생성하는 데이터 아키텍처]]

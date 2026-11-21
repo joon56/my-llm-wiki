@@ -6,10 +6,11 @@ tags:
 status: distilled
 publish: true
 lang: ko
-translation: en/10-Concepts/Resolve-Name-Collisions-by-Renaming-Not-Priority-Testing
+translation: en/10-Concepts/Resolve-Name-Collisions-by-Renaming,-Not-Priority-Testing
 created: 2026-08-04
 sources:
   - "[[2026-07-15 claude-code-skills-guide.md 읽고, 지금 설치 안 된 taste-skill Matt P (4a82016f)]]"
+  - "[[2026-10-02 최근 문서들을 확인해보면 알겠지만, 몇주 전부터 코어 인원도 운영진 회의 시간에 올 수 있게 되었어. 원래도 (b0e5f24a)]]"
 ---
 
 ## 한 줄 요약
@@ -24,8 +25,10 @@ sources:
 - rename 시 세 군데를 함께 바꿔야 함: (1) 스킬 폴더 이름, (2) frontmatter의 `name:` 필드, (3) 해당 이름을 참조하는 모든 곳.
 - 부작용: `npx skills update`가 원본 이름으로 파일을 되살림 — 업데이트를 돌린 뒤에는 rename을 다시 적용해야 함. 업데이트 루틴에 체크 항목으로 넣어둘 것.
 - 일반 원칙: 결정 규칙을 알아내는 비용 > 충돌 자체를 제거하는 비용이면, 규칙 탐구를 버리고 구조를 바꾼다.
+- 코드 이름에도 같은 원칙이 통한다. 교육용 자바 예제에서 부모 클래스를 `Character`로 지으면 자동 import되는 `java.lang.Character`와 겹쳐, 어느 쪽이 쓰이는지(같은 패키지의 클래스가 가린다)를 입문자가 알아야 한다 — `Hero`로 바꿔 그 규칙을 몰라도 되게 했다. 단계별 배포 프로젝트도 이름을 달리해(실습용 / _Mid / _Answer) 한 workspace에 같이 Import해도 'already exists' 충돌이 나지 않게 했다.
 
 ## 출처
 
 - [[2026-07-15 claude-code-skills-guide.md 읽고, 지금 설치 안 된 taste-skill Matt P (4a82016f)]]
+- [[2026-10-02 최근 문서들을 확인해보면 알겠지만, 몇주 전부터 코어 인원도 운영진 회의 시간에 올 수 있게 되었어. 원래도 (b0e5f24a)]]
 - 관련: [[서드파티 설치는 dry-run과 install-state 기준으로 다룬다]]

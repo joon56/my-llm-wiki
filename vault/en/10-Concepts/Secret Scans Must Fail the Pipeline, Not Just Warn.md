@@ -21,6 +21,9 @@ A safety check that only prints a warning stops nothing. Gates like secret scans
 - The correct structure: on severe (HIGH) findings the scanner **exits 1** → the CI step fails → downstream steps are skipped automatically. Blocking is the default; passing is the exception.
 - As applied in this wiki: `secret_scan.py` exits 1 on HIGH → the GitHub Actions build step fails → deploy blocked. Severity separation matters — only unambiguous patterns (API key formats) block as HIGH; fuzzy patterns (generic `password:`) stay MEDIUM warnings to avoid false-positive fatigue.
 - Extension: for automation that's hard to undo (bulk generation, deletion, commits), design **STOP gates** (wait for human approval) independent of any scanner. "The script took care of everything" is the most dangerous status report.
+- Scan more than the repo: build-time environment variables can get baked into the bundle, so scan the deployed JS bundle too.
+- Stop on FAIL, but add a triage step. One bundle FAIL turned out to be a supabase-js library string that compares against the `sb_secret_` prefix, and once all six secret-scan hits were the scanner's own regex strings (treat the scanner file separately). Let it pass only after deciding whether it is a real key or a pattern string.
+- Resolve warnings about public keys by narrowing scope, not deleting: the Firebase API key (`AIza…`) flagged by GitHub secret scanning is a client identifier shipped in every APK, and protecting data is the security rules' job. Instead of removing the key, its API allowlist went from the default 27 APIs to the 4 actually used (settings backed up first); a feature added later was then blocked by the list, so update the list whenever you add a feature.
 
 ## Sources
 

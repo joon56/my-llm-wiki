@@ -24,6 +24,7 @@ Verifying an official site with a static fetch (grab HTML, extract text) **canno
   3. Look for secondary sources that repost the same announcement — university notice boards, job/contest boards, and press releases frequently carry the official text verbatim.
   4. Guess at API endpoints — ticketing/registration systems often expose closing info via a separate REST API (fields like `orderable_ends_at`).
 - The same trap applies to automated link checkers: HTTP 200 with an empty body is both "site alive" and "site unreadable." URLError/403 from a urllib-grade checker is usually bot-blocking, not a dead link — re-check with a browser-grade fetch before declaring links dead.
+- The real cost of reading absence as "not announced": when web search could not find one contest's call, it was logged as "ten days later than usual — anomaly" and the tracker's tentative deadline was pushed back. In fact the official SPA's application-period API had been returning an empty 200 (meaning applications were open) all through September, and that kept being misread as "not announced" until the submission window was missed. When an absence looks later than usual, suspect your means of observation before assuming the event slipped, and confirm what an API's empty response actually means.
 
 ## Sources
 

@@ -6,7 +6,7 @@ tags:
 status: distilled
 publish: true
 lang: ko
-translation: en/10-Concepts/Small-LLM-Tool-Chaining-Is-Solved-by-Agent-Separation-Not-Prompting
+translation: en/10-Concepts/Small-LLM-Tool-Chaining-Is-Solved-by-Agent-Separation,-Not-Prompting
 created: 2026-07-26
 sources:
   - "[[2026-07-14 Ollama 모델 다운로드 오류 해결 (d12979fc)]]"

@@ -21,6 +21,9 @@ Don't quote planning documents like a README or DESIGN.md at face value — plan
 - Why drift happens: a planning document records "intent at the time" and then stops changing, while the deliverable keeps getting revised. Updating the doc to match the deliverable is almost always forgotten.
 - Verification procedure: before using a fact (a number, a name, a structure) drawn from a planning document, re-confirm that same fact against the final deliverable (the latest file version, the actual run output). If they disagree, the deliverable is the truth.
 - Same root problem as data architectures built around manual synchronization instead of a single source of truth — hand-synchronized copies inevitably diverge.
+- A report is a derivative of the code. In the first round, tests were cut from 109 to 60 after the report had gone in, so several PDF pages (test counts, line counts, a group table, four screenshots) no longer matched the code — and with the source Word file on another device, the PDF had to be patched by hand just before the deadline. The second round fixed the order: freeze the code (record a source hash) → have a script pull numbers, line numbers, and figures from the frozen code into the template → convert to PDF (the same principle as [[Freeze the Analysis With a Tag, Then Compute Results Once]]).
+- If changes land after the freeze, check the line count first: if only comments changed and the line count is the same, line-number citations and figures stay valid; if the line count changed, regenerate the report and update the freeze hash.
+- Run report-vs-code consistency as a separate, independent review: 40 line-number references, the test count, the hash, and the on-screen strings all matched, and it caught one wrong figure (peak memory).
 
 ## Sources
 -

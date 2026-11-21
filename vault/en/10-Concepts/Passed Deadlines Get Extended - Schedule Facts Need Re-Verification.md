@@ -26,6 +26,9 @@ Schedule and deadline data is **only true as of its observation time**. Even a f
   - Never finalize a status transition (open → closed) from date arithmetic alone — extensions and early closings happen outside the calendar math.
   - When sources conflict, don't pick one: **record both**, and give conservative guidance for user action (treat the earlier date as binding, submit early).
   - Quarantine unconfirmed dates in a note field marked "estimated" instead of the structured event fields — mixing confirmed and estimated dates in one field contaminates downstream derivatives (calendars, D-day badges).
+- Verify each date's type and time of day, not just the date: one contest had separate registration and final-submission deadlines, and entries turned up that listed an award-announcement date or an interim milestone as the deadline, or recorded 17:00/18:00 deadlines as 24:00. Label every date with its type (registration, submission, announcement) — a date that is right with a wrong time is the most dangerous error in a D-day reminder.
+- Convert a deadline from its reference timezone first. "End of Nov 13" in AoE (UTC−12) is 21:00 on Nov 14 in KST (KST runs 21 hours ahead); reading it as a KST date loses a day (the misreading "we can't submit tomorrow" actually came up). Build a conversion table and cross-check against the official config value (`closes_exclusive_utc`), and mark unstated rules (such as when the daily limit resets) as assumptions with conservative guidance.
+- Sources from the same organizer, secondary sources, and your own records all go wrong. A contest platform's configured deadline was a month earlier than the written notice (prefer the platform setting and the earlier date), blogs and search results kept showing the pre-correction deadline, and an entry recorded in a previous round turned out to be wrong. If the official domain has expired or been parked and redirects elsewhere, record the site as dead.
 
 ## Sources
 

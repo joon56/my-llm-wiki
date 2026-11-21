@@ -23,6 +23,8 @@ For a periodically refreshed dataset, web research works best when **"fact-check
 - Stating in the prompt that "your final message is raw data for a script, not prose for a human" makes the return value directly parseable for batch application.
 - Stamping every item with `checked: <date>` lets the next round auto-select verification targets by "oldest-checked first."
 - Items the agent reports as "unconfirmed" are worth retrying yourself in the main session — a different query or a direct fetch often breaks through.
+- Check discovery results against the originals before applying them too: across two rounds only 35 of 50 and 19 of 25 candidates were adopted (dropping weakly sourced or minor ones). A "method" an agent suggests needs verifying as well — the Kaggle internal API a discovery agent proposed was blocked by reCAPTCHA when the main session tried it, so it was not used.
+- Retry, measured: in one round the verifier (105 tool calls, about 14 minutes) and the discovery agent (59 calls, about 8 minutes) ran in parallel while the main session checked another repo, and all 3 items the verifier left unconfirmed were resolved by direct fetches from the main session. Items that still fail a direct retry, and items closed by date alone without confirming the event actually took place, get no `checked` stamp — report them as unverified so they head the next round's queue.
 
 ## Sources
 

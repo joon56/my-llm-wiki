@@ -23,6 +23,7 @@ When the same command name exists in multiple sources, do not experiment to lear
 - A rename must touch three places together: (1) the skill folder name, (2) the `name:` field in frontmatter, (3) every reference to the old name.
 - Side effect: `npx skills update` resurrects the file under its original name — the rename has to be re-applied after each update, so put it on the update checklist.
 - General principle: when discovering the resolution rule costs more than removing the collision, skip the investigation and change the structure.
+- The same rule works for names in code. In a Java teaching example, a parent class named `Character` collides with the auto-imported `java.lang.Character`, so a beginner would have to know which one wins (the same-package class shadows it) — renaming it `Hero` removed the need to know that rule. Staged handout projects also got distinct names (exercise / _Mid / _Answer) so importing them into one workspace never hits an "already exists" conflict.
 
 ## Sources
 

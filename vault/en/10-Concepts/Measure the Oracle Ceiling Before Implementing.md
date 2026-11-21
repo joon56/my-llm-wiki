@@ -23,8 +23,11 @@ Before building a new lever, measure **the gain you would get if the estimator w
 - Procedure: hypothesis -> ceiling measurement (oracle setup or analytic calculation) -> implement an estimator only if ceiling >= bar -> local validation.
 - The ceiling bounds the axis, not just this estimator: it proves that swapping estimators will not help, so you close the axis and move to the next hypothesis.
 - Record the nulls: keep rejected experiments' assertions as strict xfail tests so nobody digs the same axis again.
+- Case 4 (the measurement's own ceiling): in a sensor-based walking study, the decision rule was "at least 80% of steps within ±3% of the beat." Before the main runs, a "perfect sync" recording walked to a metronome showed mean cadence within 0.2% of the beat, yet only 47-50% of steps inside ±3% — step-interval variability alone (CV 5.2-5.7%) puts the bar out of reach (under a normal approximation, 80% inside ±3% needs a CV of 2.3% or less, decidable with zero code). The rule stayed as registered; an auxiliary criterion and a "measurement limit" note were added before any results were seen.
+- Measure the floor too: a criterion that holds even with zero effect cannot discriminate. A comparison like "agreement is higher in the near-tempo condition than in the far one" held almost automatically even if steps did not change at all, and a metric that is zero by definition was still computed but reported as a "structural zero".
+- Measure the ceiling as the residual after what the incumbent already absorbs. Even a candidate that looks like an official hint (new wording in the organizer's schema description) starts with whether the metric can see the change at all — when only per-cell probabilities are scored, fixing the parent-question structure barely moves the per-cell estimates. The defect was real, but the incumbent's soft path had already absorbed most of it, so the residual effect was far below the leaderboard resolution ([[Effects Smaller Than the Leaderboard Resolution Cannot Be Read]]), and all three probes read unchanged.
 
 ## Sources
 
 - Distilled from private Claude Code session logs (not published).
-- Related: [[A Leaderboard Submission Is a Pre-Registered Experiment]], [[Swapping the Model Class Beats Adding Knobs]]
+- Related: [[A Leaderboard Submission Is a Pre-Registered Experiment]], [[Swapping the Model Class Beats Adding Knobs]], [[Effects Smaller Than the Leaderboard Resolution Cannot Be Read]]

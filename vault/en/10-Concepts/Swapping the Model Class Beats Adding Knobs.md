@@ -23,6 +23,9 @@ Experiments that added knobs to an existing model (per-item tuning, smoothing, p
 - Signal: two or three consecutive null knob experiments on the same axis mean the class is saturated. Stop refining; move to a new class or to exploiting data structure.
 - Calibration knobs saturate too: a net trained with cross-entropy and early stopping was already calibrated, so the temperature search picked T=1.0 on all three datasets.
 - Caveat: if the sandbox is simple, it can under-measure class-swap gains as well (real-data gains were 3-5x the local ones).
+- The opposite cost (stuck on knobs): over seven weeks, 22 of 23 experiments were direct micro-variants of the incumbent, and leaderboard readings were mostly ties with not a single gain. Meanwhile the standard approach for that problem type (categorical gradient-boosted trees) was never properly tested on real data.
+- Probe a class swap early, once, untuned. An untuned tree-only model first went up on real data just two days before the development-phase deadline; it gave a more informative reading than all the micro-variants, but there was no time left to grow it, and output blending (linear and log pools) could not get past one leaderboard cell.
+- When many top entries sit on the same rounded score (the top 15 teams shared one value), suspect a common source such as a tutorial or a standard approach. If you cannot find the source, test that standard approach on real data first.
 
 ## Sources
 

@@ -23,6 +23,7 @@ claude.ai (web/desktop) and local Claude Code are **fully isolated sandboxes** �
   - Not portable: anything depending on hooks (event triggers), local MCP servers, subagents, or local scripts
 - **Load-timing trap**: Claude Code plugins/hooks load **only at session start**. If a freshly installed command shows "unknown command", it's not broken — you haven't restarted the session. Check that first.
 - Generalization: even within one product family, assume extensions are isolated per execution environment until proven otherwise.
+- Exception: claude.ai connectors (MCP) do show up in Claude Code, as servers named "claude.ai <name>". But if you connect one mid-session, the running session keeps its pre-connection tool list — a new terminal showed it as Connected while the current session could not call it, and reconnecting that server from `/mcp` fixed it (reproduced twice).
 
 ## Sources
 

@@ -23,6 +23,7 @@ When a technique sits in a grey zone of the competition rules, do not settle it 
 - Channel: if a public forum feels uncomfortable, start with private email — the answer is equally binding. Bundle any pending questions (e.g. a missing file).
 - Outcome: the answer was "matching rows within the dataset, without extracting outside identities, is permitted" — the biggest lever opened legitimately.
 - Boundary: clear violations that need no asking (e.g. a second account to dodge submission limits) are not what this is for.
+- Failing in the other direction (over-compliance) costs too. An assignment's condition "submit two .c files" was read, without asking, as "no header split", so everything was crammed into a single .c file — and later the answer came back that splitting into headers was fine. The next assignment used a 270-line main plus four headers and had a much stronger structural case. Before assuming an ambiguous constraint is a prohibition, ask in the same pre-approval frame: "may I split it like this?"
 
 ## Sources
 

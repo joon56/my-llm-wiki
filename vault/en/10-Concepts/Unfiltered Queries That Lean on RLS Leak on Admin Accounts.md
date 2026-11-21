@@ -23,8 +23,10 @@ A "my history" page ran `select('*')` with no filter and looked correct for regu
 - Principle: RLS defines **the maximum a user may see (authorization)**; the query filter defines **what this page should show (intent)**. They answer different questions. State the page's intent in the query.
 - Fix: add `.eq('student_id', me)` with the user's own identifier. Leave RLS as is — the admin's right to read everything is legitimate.
 - Habit: open the same page with accounts at each privilege level, and always check "my ..." pages with an admin account.
+- The same trap from the other side: reusing a table inherits its RLS policy (the maximum anyone may see). Putting a new feature's applicant list on an existing participants table would have exposed names to outsiders through that table's anon read policy, so public data (head counts) and private data (names, contacts) were split into separate tables.
+- Strip default privileges and grant only what is needed: revoke Supabase's default grants, grant back only the required ones, and open inserts per column (`grant insert (chat_id, question)`) so users cannot write fields like status or capacity. Verify such policy and grant combinations on a real engine ([[Verify RLS and Triggers on a Real Engine Even Without DB Access]]).
 
 ## Sources
 
 - Distilled from private Claude Code session logs (not published).
-- Related: [[Authorization Must Not Trust Client Input]]
+- Related: [[Authorization Must Not Trust Client Input]], [[Verify RLS and Triggers on a Real Engine Even Without DB Access]]

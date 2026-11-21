@@ -6,7 +6,7 @@ tags:
 status: distilled
 publish: true
 lang: ko
-translation: en/10-Concepts/Remove-PDF-PII-With-True-Redaction-Not-Overlays
+translation: en/10-Concepts/Remove-PDF-PII-With-True-Redaction,-Not-Overlays
 created: 2026-08-04
 sources:
   - "[[2026-07-11 command-namemodelcommand-name command-messagemodelcommand-me (907a6c84)]]"

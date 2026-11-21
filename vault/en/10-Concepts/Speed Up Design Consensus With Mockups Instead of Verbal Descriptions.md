@@ -24,6 +24,9 @@ Don't make people choose a design direction from a verbal description — render
   3. Once a direction is picked, compare intensity variants within it (pure vs. soft) — go from big direction to detail, in that order
 - Side effect: if clicks get logged, preference shows up before the explicit answer — repeatedly clicking one mockup is effectively a decision already made. You can reframe the question ("why does C split opinion?") to get to certainty faster.
 - Condition: mockup fidelity only needs to match the question — color and typography decisions don't need a polished prototype; an inline-styled mini mockup is enough.
+- After a mockup is picked, the next step is an "improvement switchboard" prototype: eight improvements toggle on and off one by one for before/after comparison, and clicking "use this combination" on the preferred set records the choice. The top dropdown menu and three color schemes were also made clickable instead of described.
+- Feel beats the recommendation: A was recommended out of three, but after trying them the user picked B as "easier to recognize at a glance". Give a recommendation with its reasons, but take the decision after the person has touched the options.
+- The prototype becomes the spec: it covered the whole flow from sign-up through closing, matching, and the next round, 37 scenarios were checked automatically, and the 8 design rules settled there (numbered so they could be amended by number) became the implementation baseline.
 
 ## Sources
 - Related: [[Why High-Contrast Brutalist UI Does Not Suit Long-Form Content]]

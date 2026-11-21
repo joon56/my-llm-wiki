@@ -23,6 +23,7 @@ The moment a value permanently stored on the client — a browser localStorage b
   - Assign a separate, immutable identifier at creation time (a sequence number, a UUID), kept distinct from the display name
   - Add "does this value get stored on the user's device?" to the checklist before any schema change
 - If you've already shipped: the only option left is permanently maintaining an old-ID-to-new-ID mapping table. Not changing it in the first place is overwhelmingly cheaper.
+- An app's package name (applicationId) is the same kind of contract: change it and existing installs stop receiving updates and linger as a separate app, and the backend app registration, signing fingerprints, and config files all have to be redone. So the package name was changed together with the app name early on, while installs were few — and the cloud project ID, which cannot be changed at all, only got a new display name.
 
 ## Sources
 -
